@@ -29,24 +29,26 @@ final class Event: Codable, FlightProtocol {
     
     // MARK: - Properties
     
-    public var airline: Airline
-    public var startTime: Date
-    public var endTime: Date
-    public var name: String
+    public var airline: Airline?
+    public var startTime: Date?
+    public var endTime: Date?
+    public var name: String?
     
     // MARK: - Initialization
     
     public required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        let stringStartTime = try values.decode(String.self, forKey: .startTime)
-        self.startTime = Date.with(value: stringStartTime, format: dateFormatEvent)
+        if let stringStartTime = try values.decodeIfPresent(String.self, forKey: .startTime) {
+            self.startTime = Date.with(value: stringStartTime, format: dateFormatEvent)
+        }
         
-        let stringEndTime = try values.decode(String.self, forKey: .endTime)
-        self.endTime = Date.with(value: stringEndTime, format: dateFormatEvent)
+        if let stringEndTime = try values.decodeIfPresent(String.self, forKey: .endTime) {
+            self.endTime = Date.with(value: stringEndTime, format: dateFormatEvent)
+        }
         
-        self.airline = try values.decode(Airline.self, forKey: .airline)
-        self.name = try values.decode(String.self, forKey: .name)
+        self.airline = try values.decodeIfPresent(Airline.self, forKey: .airline)
+        self.name = try values.decodeIfPresent(String.self, forKey: .name)
     }
     
     // MARK: - Encode
@@ -61,11 +63,19 @@ final class Event: Codable, FlightProtocol {
     
     public var subtitle: String {
         var values = [String]()
-        if !name.isEmpty {
+        
+        if let name = name, !name.isEmpty {
             values.append(name)
         }
-        values.append(startTime.toString(.formatterTime))
-        values.append(endTime.toString(.formatterTime))
+        
+        if let startTime = startTime {
+            values.append(startTime.toString(.formatterTime))
+        }
+        
+        if let endTime = endTime {
+            values.append(endTime.toString(.formatterTime))
+        }
+        
         return values.joined(separator: "\n")
     }
 }
