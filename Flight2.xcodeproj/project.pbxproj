@@ -27,6 +27,7 @@
 		CE1BE1C823DCF3D500E096EF /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1C723DCF3D500E096EF /* EventService.swift */; };
 		CE1BE1CB23DCF49500E096EF /* MoveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1CA23DCF49500E096EF /* MoveService.swift */; };
 		CE1BE1CE23DCF53D00E096EF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1CD23DCF53D00E096EF /* Configuration.swift */; };
+		CE1BE1D123DCF6A100E096EF /* ConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D023DCF6A100E096EF /* ConfigurationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		CE1BE1C723DCF3D500E096EF /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		CE1BE1CA23DCF49500E096EF /* MoveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveService.swift; sourceTree = "<group>"; };
 		CE1BE1CD23DCF53D00E096EF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		CE1BE1D023DCF6A100E096EF /* ConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationService.swift; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 		CE1BE1A923DCE8D300E096EF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE1BE1CF23DCF68600E096EF /* Configuration */,
 				CE1BE1AA23DCE8EF00E096EF /* Notice */,
 				CE1BE1C623DCF3BF00E096EF /* Event */,
 				CE1BE1C923DCF48200E096EF /* Move */,
@@ -326,6 +329,14 @@
 			isa = PBXGroup;
 			children = (
 				CE1BE1CD23DCF53D00E096EF /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CE1BE1CF23DCF68600E096EF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1D023DCF6A100E096EF /* ConfigurationService.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -467,6 +478,7 @@
 				CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */,
 				CE1BE1B923DCEB4000E096EF /* DateFormatter+Extension.swift in Sources */,
 				CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */,
+				CE1BE1D123DCF6A100E096EF /* ConfigurationService.swift in Sources */,
 				CE1BE1C523DCF2C400E096EF /* TimeInterval+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
