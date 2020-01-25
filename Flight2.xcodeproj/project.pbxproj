@@ -15,6 +15,10 @@
 		CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1A123DCE30D00E096EF /* BaseViewController.swift */; };
 		CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */; };
 		CE1BE1A823DCE7A600E096EF /* FlightListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1A723DCE7A600E096EF /* FlightListViewModel.swift */; };
+		CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1AB23DCE90500E096EF /* NoticeService.swift */; };
+		CE1BE1AE23DCE92900E096EF /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1AD23DCE92900E096EF /* Notice.swift */; };
+		CE1BE1B123DCE98900E096EF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1B023DCE98900E096EF /* Date+Extension.swift */; };
+		CE1BE1B623DCE9F800E096EF /* FlightProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1B523DCE9F800E096EF /* FlightProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		CE1BE1A123DCE30D00E096EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		CE1BE1A723DCE7A600E096EF /* FlightListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListViewModel.swift; sourceTree = "<group>"; };
+		CE1BE1AB23DCE90500E096EF /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
+		CE1BE1AD23DCE92900E096EF /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		CE1BE1B023DCE98900E096EF /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CE1BE1B523DCE9F800E096EF /* FlightProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightProtocol.swift; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +103,7 @@
 				CE1BE19D23DCE1F400E096EF /* ViewControllers */,
 				CE1BE19A23DCE15F00E096EF /* Controllers */,
 				CE1BE1A323DCE43E00E096EF /* Extensions */,
+				CE1BE1B223DCE9BF00E096EF /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -110,6 +119,7 @@
 		CE1BE19A23DCE15F00E096EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE1BE1A923DCE8D300E096EF /* Services */,
 				CE1BE19B23DCE16B00E096EF /* Base */,
 			);
 			path = Controllers;
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1BE1A423DCE46800E096EF /* Decoder */,
+				CE1BE1AF23DCE97800E096EF /* Date */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +191,55 @@
 				CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */,
 			);
 			path = Decoder;
+			sourceTree = "<group>";
+		};
+		CE1BE1A923DCE8D300E096EF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1AA23DCE8EF00E096EF /* Notice */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE1BE1AA23DCE8EF00E096EF /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1AB23DCE90500E096EF /* NoticeService.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		CE1BE1AF23DCE97800E096EF /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1B023DCE98900E096EF /* Date+Extension.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		CE1BE1B223DCE9BF00E096EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1B323DCE9D900E096EF /* Flight */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE1BE1B323DCE9D900E096EF /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1B423DCE9E000E096EF /* Notice */,
+				CE1BE1B523DCE9F800E096EF /* FlightProtocol.swift */,
+			);
+			path = Flight;
+			sourceTree = "<group>";
+		};
+		CE1BE1B423DCE9E000E096EF /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1AD23DCE92900E096EF /* Notice.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 		CE367C1992C534EE56E17A0C /* Frameworks */ = {
@@ -304,8 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
+				CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */,
 				CE1BE1A823DCE7A600E096EF /* FlightListViewModel.swift in Sources */,
+				CE1BE1AE23DCE92900E096EF /* Notice.swift in Sources */,
 				CE1BE18423DCDE7C00E096EF /* AppDelegate.swift in Sources */,
+				CE1BE1B623DCE9F800E096EF /* FlightProtocol.swift in Sources */,
+				CE1BE1B123DCE98900E096EF /* Date+Extension.swift in Sources */,
 				CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */,
 				CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */,
 			);
