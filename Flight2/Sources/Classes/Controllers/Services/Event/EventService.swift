@@ -6,7 +6,7 @@ final class EventService: NWService {
     
     // MARK: - Network Method
     
-    public static func fetchEventList(source: String) -> SignalProducer<[Event], Error> {
+    public static func fetchEventList(source: String?) -> SignalProducer<[Event], Error> {
         let request = NWRequest(source: source)
         return make(request: request).flatMap(.latest, { data -> SignalProducer<[Event], Error> in
             if let list = JSONDecoder.decode([Event].self, from: data) {

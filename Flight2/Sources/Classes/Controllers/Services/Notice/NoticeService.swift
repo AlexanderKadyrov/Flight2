@@ -6,7 +6,7 @@ final class NoticeService: NWService {
     
     // MARK: - Network Method
     
-    public static func fetchNoticeList(source: String) -> SignalProducer<[Notice], Error> {
+    public static func fetchNoticeList(source: String?) -> SignalProducer<[Notice], Error> {
         let request = NWRequest(source: source)
         return make(request: request).flatMap(.latest, { data -> SignalProducer<[Notice], Error> in
             if let list = JSONDecoder.decode([Notice].self, from: data) {
