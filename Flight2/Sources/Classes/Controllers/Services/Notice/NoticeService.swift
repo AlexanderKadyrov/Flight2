@@ -3,6 +3,9 @@ import Foundation
 import NWClient
 
 final class NoticeService: NWService {
+    
+    // MARK: - Network Method
+    
     public static func fetchNoticeList(source: String) -> SignalProducer<[Notice], Error> {
         let request = NWRequest(source: source)
         return make(request: request).flatMap(.latest, { data -> SignalProducer<[Notice], Error> in
