@@ -22,6 +22,8 @@
 		CE1BE1B923DCEB4000E096EF /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1B823DCEB4000E096EF /* DateFormatter+Extension.swift */; };
 		CE1BE1BC23DCECD100E096EF /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1BB23DCECD100E096EF /* Error+Extension.swift */; };
 		CE1BE1BF23DCEEB600E096EF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1BE23DCEEB600E096EF /* Event.swift */; };
+		CE1BE1C223DCF1B200E096EF /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1C123DCF1B200E096EF /* Move.swift */; };
+		CE1BE1C523DCF2C400E096EF /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1C423DCF2C400E096EF /* TimeInterval+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		CE1BE1B823DCEB4000E096EF /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		CE1BE1BB23DCECD100E096EF /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 		CE1BE1BE23DCEEB600E096EF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CE1BE1C123DCF1B200E096EF /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CE1BE1C423DCF2C400E096EF /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1BE1B723DCEB2900E096EF /* DateFormatter */,
+				CE1BE1C323DCF2A900E096EF /* TimeInterval */,
 				CE1BE1A423DCE46800E096EF /* Decoder */,
 				CE1BE1BA23DCECAB00E096EF /* Error */,
 				CE1BE1AF23DCE97800E096EF /* Date */,
@@ -238,6 +243,7 @@
 			children = (
 				CE1BE1B423DCE9E000E096EF /* Notice */,
 				CE1BE1BD23DCEE9A00E096EF /* Event */,
+				CE1BE1C023DCF19E00E096EF /* Move */,
 				CE1BE1B523DCE9F800E096EF /* FlightProtocol.swift */,
 			);
 			path = Flight;
@@ -273,6 +279,22 @@
 				CE1BE1BE23DCEEB600E096EF /* Event.swift */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		CE1BE1C023DCF19E00E096EF /* Move */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1C123DCF1B200E096EF /* Move.swift */,
+			);
+			path = Move;
+			sourceTree = "<group>";
+		};
+		CE1BE1C323DCF2A900E096EF /* TimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1C423DCF2C400E096EF /* TimeInterval+Extension.swift */,
+			);
+			path = TimeInterval;
 			sourceTree = "<group>";
 		};
 		CE367C1992C534EE56E17A0C /* Frameworks */ = {
@@ -399,6 +421,7 @@
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
 				CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */,
 				CE1BE1BC23DCECD100E096EF /* Error+Extension.swift in Sources */,
+				CE1BE1C223DCF1B200E096EF /* Move.swift in Sources */,
 				CE1BE1A823DCE7A600E096EF /* FlightListViewModel.swift in Sources */,
 				CE1BE1BF23DCEEB600E096EF /* Event.swift in Sources */,
 				CE1BE1AE23DCE92900E096EF /* Notice.swift in Sources */,
@@ -408,6 +431,7 @@
 				CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */,
 				CE1BE1B923DCEB4000E096EF /* DateFormatter+Extension.swift in Sources */,
 				CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */,
+				CE1BE1C523DCF2C400E096EF /* TimeInterval+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
