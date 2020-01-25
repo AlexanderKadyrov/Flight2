@@ -13,6 +13,7 @@
 		CE1BE18D23DCDE7D00E096EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1BE18C23DCDE7D00E096EF /* Assets.xcassets */; };
 		CE1BE19023DCDE7D00E096EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1BE18E23DCDE7D00E096EF /* LaunchScreen.storyboard */; };
 		CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1A123DCE30D00E096EF /* BaseViewController.swift */; };
+		CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CE1BE18F23DCDE7D00E096EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1BE19123DCDE7D00E096EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1BE1A123DCE30D00E096EF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 			children = (
 				CE1BE19D23DCE1F400E096EF /* ViewControllers */,
 				CE1BE19A23DCE15F00E096EF /* Controllers */,
+				CE1BE1A323DCE43E00E096EF /* Extensions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -158,6 +161,22 @@
 				CE1BE1A123DCE30D00E096EF /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CE1BE1A323DCE43E00E096EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1A423DCE46800E096EF /* Decoder */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE1BE1A423DCE46800E096EF /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1A523DCE4AA00E096EF /* JSONDecoder+Extension.swift */,
+			);
+			path = Decoder;
 			sourceTree = "<group>";
 		};
 		CE367C1992C534EE56E17A0C /* Frameworks */ = {
@@ -283,6 +302,7 @@
 			files = (
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
 				CE1BE18423DCDE7C00E096EF /* AppDelegate.swift in Sources */,
+				CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */,
 				CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
