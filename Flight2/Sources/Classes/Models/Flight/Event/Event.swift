@@ -2,7 +2,7 @@ import Foundation
 
 fileprivate let dateFormatEvent = "dd-MM-yyyy HH:mm:ss"
 
-final class Event: Codable {
+final class Event: Codable, FlightProtocol {
     
     // MARK: - Enums
     
@@ -46,11 +46,26 @@ final class Event: Codable {
         self.endTime = Date.with(value: stringEndTime, format: dateFormatEvent)
         
         self.airline = try values.decode(Airline.self, forKey: .airline)
-        
         self.name = try values.decode(String.self, forKey: .name)
     }
     
     // MARK: - Encode
     
     public func encode(to encoder: Encoder) throws {}
+    
+    // MARK: - FlightProtocol
+    
+    public var title: String {
+        return String(describing: type(of: self))
+    }
+    
+    public var subtitle: String {
+        var values = [String]()
+        if !name.isEmpty {
+            values.append(name)
+        }
+        values.append(startTime.toString(.formatterTime))
+        values.append(endTime.toString(.formatterTime))
+        return values.joined(separator: "\n")
+    }
 }
