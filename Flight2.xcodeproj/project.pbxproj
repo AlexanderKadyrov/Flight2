@@ -26,6 +26,7 @@
 		CE1BE1C523DCF2C400E096EF /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1C423DCF2C400E096EF /* TimeInterval+Extension.swift */; };
 		CE1BE1C823DCF3D500E096EF /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1C723DCF3D500E096EF /* EventService.swift */; };
 		CE1BE1CB23DCF49500E096EF /* MoveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1CA23DCF49500E096EF /* MoveService.swift */; };
+		CE1BE1CE23DCF53D00E096EF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1CD23DCF53D00E096EF /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		CE1BE1C423DCF2C400E096EF /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		CE1BE1C723DCF3D500E096EF /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		CE1BE1CA23DCF49500E096EF /* MoveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveService.swift; sourceTree = "<group>"; };
+		CE1BE1CD23DCF53D00E096EF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 		CE1BE1B223DCE9BF00E096EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE1BE1CC23DCF52400E096EF /* Configuration */,
 				CE1BE1B323DCE9D900E096EF /* Flight */,
 			);
 			path = Models;
@@ -317,6 +320,14 @@
 				CE1BE1CA23DCF49500E096EF /* MoveService.swift */,
 			);
 			path = Move;
+			sourceTree = "<group>";
+		};
+		CE1BE1CC23DCF52400E096EF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1CD23DCF53D00E096EF /* Configuration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		CE367C1992C534EE56E17A0C /* Frameworks */ = {
@@ -450,6 +461,7 @@
 				CE1BE1BF23DCEEB600E096EF /* Event.swift in Sources */,
 				CE1BE1AE23DCE92900E096EF /* Notice.swift in Sources */,
 				CE1BE18423DCDE7C00E096EF /* AppDelegate.swift in Sources */,
+				CE1BE1CE23DCF53D00E096EF /* Configuration.swift in Sources */,
 				CE1BE1B623DCE9F800E096EF /* FlightProtocol.swift in Sources */,
 				CE1BE1B123DCE98900E096EF /* Date+Extension.swift in Sources */,
 				CE1BE1A623DCE4AA00E096EF /* JSONDecoder+Extension.swift in Sources */,
