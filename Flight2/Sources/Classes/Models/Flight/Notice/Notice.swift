@@ -1,11 +1,11 @@
 import Foundation
 
-final struct Notice: Codable {
+public struct Notice: Codable, FlightProtocol {
+    
+    // MARK: - Properties
+    
     public var flightDate: Date?
     public var gate: String?
-}
-
-extension Notice: FlightProtocol {
     
     public var title: String {
         return String(describing: type(of: self))
