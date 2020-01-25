@@ -7,6 +7,8 @@ public struct Notice: Codable, FlightProtocol {
     public var flightDate: Date?
     public var gate: String?
     
+    // MARK: - FlightProtocol
+    
     public var title: String {
         return String(describing: type(of: self))
     }
