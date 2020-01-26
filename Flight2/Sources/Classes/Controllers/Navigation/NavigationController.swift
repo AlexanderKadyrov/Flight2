@@ -14,7 +14,7 @@ class NavigationController: UINavigationController {
     
     public init(_ rootViewController: UIViewController, color: UIColor = .white) {
         super.init(rootViewController: rootViewController)
-        self.navigationBar.backgroundColor = color
         self.navigationBar.isTranslucent = false
+        self.navigationBar.barTintColor = color
     }
 }
