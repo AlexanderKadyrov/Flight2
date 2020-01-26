@@ -24,6 +24,6 @@ fileprivate extension UIWindow {
         let nv = NavigationController(vc, color: .colorBackground)
         rootViewController = nv
         makeKeyAndVisible()
-        tintColor = .white
+        tintColor = .colorSystemTint
     }
 }
