@@ -4,6 +4,15 @@ extension UIColor {
     
     public static let colorBrilliantAzure = color(hex: "33A1FD")
     
+    public static let colorLabelTitle: UIColor = {
+        let hex = color(hex: "31393C")
+        if #available(iOS 13.0, *) {
+            guard let color = UIColor(named: "color_label_title") else { return hex }
+            return color
+        }
+        return hex
+    }()
+    
     public static let colorBackground: UIColor = {
         if #available(iOS 13.0, *) {
             guard let color = UIColor(named: "color_background") else { return .white }
