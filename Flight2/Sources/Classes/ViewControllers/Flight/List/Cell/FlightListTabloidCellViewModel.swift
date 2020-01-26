@@ -5,5 +5,12 @@ final class FlightListTabloidCellViewModel: TabloidCellViewModel {
     
     // MARK: - Properties
     
-    public var item: FlightProtocol!
+    public let model: FlightProtocol
+    
+    // MARK: - Initialization
+    
+    public init(model: FlightProtocol) {
+        self.model = model
+        super.init(cellIdentifier: "FlightListTabloidCellView")
+    }
 }

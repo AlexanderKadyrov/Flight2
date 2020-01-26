@@ -1,4 +1,5 @@
 import ReactiveSwift
+import ReactiveCocoa
 import TabloidView
 import Foundation
 
@@ -14,5 +15,11 @@ final class FlightListViewModel {
     
     public let tabloidViewModel = TabloidViewModel(tabloidStyle: .plain,
                                                    separatorStyle: .none,
-                                                   cellIdentifiers: ["FlightListTableViewCell"])
+                                                   cellIdentifiers: ["FlightListTabloidCellView"])
+    
+    // MARK: - Initialization
+    
+    public init() {
+        tabloidViewModel.elements <~ actionFetchFlightList.values.map({ [$0.map({ FlightListTabloidCellViewModel(model: $0) })]})
+    }
 }
