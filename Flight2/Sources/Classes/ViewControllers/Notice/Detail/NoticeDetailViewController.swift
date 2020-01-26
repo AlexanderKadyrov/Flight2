@@ -30,7 +30,6 @@ final class NoticeDetailViewController: BaseViewController {
         super.viewDidLoad()
         makeToolbar()
         makeItems()
-        setData()
     }
     
     // MARK: - Make
