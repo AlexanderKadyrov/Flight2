@@ -1,6 +1,10 @@
 # Flight
 
 Приложение Flight выполнено программистом Alexander Kadyrov.
+С применением паттерна программирования MVVM и использованием библиотек ReactiveSwift & ReactiveCocoa.
+В проект включены самостоятельно написанные библиотеки:
+* [TabloidView](https://github.com/AlexanderKadyrov/TabloidView)
+* [NWClient](https://github.com/AlexanderKadyrov/NWClient)
 
 # Описание проекта
 
@@ -16,11 +20,9 @@
 
 Для успешной работы с JSON структурой данных, используются инструменты Codable и JSONDecoder
 
-# Light Mode
+# Light & Dark Mode
 
-Приложение поддерживает светлую тему по умолчанию
-
-![alt text](https://raw.githubusercontent.com/AlexanderKadyrov/Flight2/master/Screenshots/1.png)
+Приложение поддерживает светлую и темную темы (см. скриншоты в проекте)
 
 # PS
 
