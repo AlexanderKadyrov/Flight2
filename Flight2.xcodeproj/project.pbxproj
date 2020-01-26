@@ -30,6 +30,7 @@
 		CE1BE1D123DCF6A100E096EF /* ConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D023DCF6A100E096EF /* ConfigurationService.swift */; };
 		CE1BE1D423DCFD1E00E096EF /* FlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D323DCFD1E00E096EF /* FlightService.swift */; };
 		CE1BE1D723DD8C7800E096EF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D623DD8C7800E096EF /* NavigationController.swift */; };
+		CE1BE1DA23DD8D6D00E096EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D923DD8D6D00E096EF /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		CE1BE1D023DCF6A100E096EF /* ConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationService.swift; sourceTree = "<group>"; };
 		CE1BE1D323DCFD1E00E096EF /* FlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightService.swift; sourceTree = "<group>"; };
 		CE1BE1D623DD8C7800E096EF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CE1BE1D923DD8D6D00E096EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +207,7 @@
 				CE1BE1B723DCEB2900E096EF /* DateFormatter */,
 				CE1BE1C323DCF2A900E096EF /* TimeInterval */,
 				CE1BE1A423DCE46800E096EF /* Decoder */,
+				CE1BE1D823DD8D5300E096EF /* UIColor */,
 				CE1BE1BA23DCECAB00E096EF /* Error */,
 				CE1BE1AF23DCE97800E096EF /* Date */,
 			);
@@ -363,6 +366,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		CE1BE1D823DD8D5300E096EF /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BE1D923DD8D6D00E096EF /* UIColor+Extension.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		CE367C1992C534EE56E17A0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1BE1DA23DD8D6D00E096EF /* UIColor+Extension.swift in Sources */,
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
 				CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */,
 				CE1BE1BC23DCECD100E096EF /* Error+Extension.swift in Sources */,
