@@ -24,7 +24,7 @@ public class BaseViewController: UIViewController {
     func setBarTitle(_ text: String) {
         let navigationTitleFont = UIFont.boldSystemFont(ofSize: 21)
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.colorLabelTitle,
+            NSAttributedString.Key.foregroundColor: UIColor.colorLabelText,
             NSAttributedString.Key.font: navigationTitleFont
         ]
         self.title = text
