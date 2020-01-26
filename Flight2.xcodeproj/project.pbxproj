@@ -33,6 +33,8 @@
 		CE1BE1DA23DD8D6D00E096EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1D923DD8D6D00E096EF /* UIColor+Extension.swift */; };
 		CE1BE1E223DD982100E096EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE1BE1E423DD982100E096EF /* Localizable.strings */; };
 		CE1BE1E923DD999600E096EF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BE1E823DD999600E096EF /* String+Extension.swift */; };
+		CE3E0EAF23DDA8DE00239DAA /* FlightListTabloidCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EAE23DDA8DE00239DAA /* FlightListTabloidCellView.swift */; };
+		CE3E0EB123DDA95000239DAA /* FlightListTabloidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB023DDA95000239DAA /* FlightListTabloidCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		CE1BE1E523DD983800E096EF /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1BE1E623DD983800E096EF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE1BE1E823DD999600E096EF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CE3E0EAE23DDA8DE00239DAA /* FlightListTabloidCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListTabloidCellView.swift; sourceTree = "<group>"; };
+		CE3E0EB023DDA95000239DAA /* FlightListTabloidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListTabloidCellViewModel.swift; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +198,7 @@
 		CE1BE19F23DCE22800E096EF /* List */ = {
 			isa = PBXGroup;
 			children = (
+				CE3E0EAD23DDA86B00239DAA /* Cell */,
 				CE1BE18723DCDE7C00E096EF /* FlightListViewController.swift */,
 				CE1BE1A723DCE7A600E096EF /* FlightListViewModel.swift */,
 			);
@@ -406,6 +411,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE3E0EAD23DDA86B00239DAA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E0EB023DDA95000239DAA /* FlightListTabloidCellViewModel.swift */,
+				CE3E0EAE23DDA8DE00239DAA /* FlightListTabloidCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -521,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1BE1DA23DD8D6D00E096EF /* UIColor+Extension.swift in Sources */,
+				CE3E0EAF23DDA8DE00239DAA /* FlightListTabloidCellView.swift in Sources */,
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
 				CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */,
 				CE1BE1BC23DCECD100E096EF /* Error+Extension.swift in Sources */,
@@ -531,6 +546,7 @@
 				CE1BE1A823DCE7A600E096EF /* FlightListViewModel.swift in Sources */,
 				CE1BE1BF23DCEEB600E096EF /* Event.swift in Sources */,
 				CE1BE1AE23DCE92900E096EF /* Notice.swift in Sources */,
+				CE3E0EB123DDA95000239DAA /* FlightListTabloidCellViewModel.swift in Sources */,
 				CE1BE18423DCDE7C00E096EF /* AppDelegate.swift in Sources */,
 				CE1BE1E923DD999600E096EF /* String+Extension.swift in Sources */,
 				CE1BE1CE23DCF53D00E096EF /* Configuration.swift in Sources */,

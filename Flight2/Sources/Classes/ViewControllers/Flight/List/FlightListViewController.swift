@@ -20,6 +20,7 @@ final class FlightListViewController: BaseViewController {
         super.viewDidLoad()
         makeTableView()
         makeToolbar()
+        loadData()
     }
     
     // MARK: - Make
@@ -33,5 +34,11 @@ final class FlightListViewController: BaseViewController {
     
     private func makeToolbar() {
         setBarTitle("flight_navigation_bar_title".localized() + " " + "App")
+    }
+    
+    // MARK: - Load
+    
+    private func loadData() {
+        viewModel.actionFetchFlightList.apply().start()
     }
 }
