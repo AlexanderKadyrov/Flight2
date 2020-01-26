@@ -14,6 +14,7 @@ final class NoticeDetailViewController: BaseViewController {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 51, weight: .medium)
         label.textColor = .colorLabelText
+        label.textAlignment = .center
         return label
     }()
     
@@ -21,6 +22,7 @@ final class NoticeDetailViewController: BaseViewController {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 21)
         label.textColor = .colorLabelText
+        label.textAlignment = .center
         return label
     }()
     
