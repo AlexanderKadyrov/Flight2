@@ -2,7 +2,7 @@ import ReactiveSwift
 import TabloidView
 import Foundation
 
-fileprivate let source = "https://github.com/AlexanderKadyrov/JSONs/blob/master/Flight/seeder_configuration.json"
+fileprivate let source = "https://raw.githubusercontent.com/AlexanderKadyrov/JSONs/master/Flight/seeder_configuration.json"
 
 final class FlightListViewModel {
     
