@@ -12,7 +12,7 @@ final class FlightService: NWService {
                 .combineLatest(with: NoticeService.fetchNoticeList(source: configuration.sourceNotice))
                 .combineLatest(with: EventService.fetchEventList(source: configuration.sourceEvent))
                 .combineLatest(with: MoveService.fetchMoveList(source: configuration.sourceMove))
-                .map({ ($0.0.0.1 + $0.0.1 + $0.1) })
+                .map({ ($0.0.0.1 + $0.0.1 + $0.1).shuffled() })
         })
     }
 }
