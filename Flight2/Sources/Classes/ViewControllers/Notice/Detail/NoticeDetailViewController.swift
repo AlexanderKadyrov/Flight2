@@ -62,11 +62,7 @@ final class NoticeDetailViewController: BaseViewController {
     
     private func set(viewModel: NoticeDetailViewModel) {
         guard let notice = viewModel.notice else { return }
-        if let gate = notice.gate, !gate.isEmpty {
-            labelTitle.text = gate
-        }
-        if let flightDate = notice.flightDate {
-            labelSubtitle.text = flightDate.toString(.formatterDate)
-        }
+        labelSubtitle.text = notice.flightDate?.toString(.formatterDate)
+        labelTitle.text = notice.gate
     }
 }
