@@ -13,14 +13,14 @@ final class NoticeDetailViewController: BaseViewController {
     private let labelTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 51, weight: .medium)
-        label.textColor = .white
+        label.textColor = .colorLabelText
         return label
     }()
     
     private var labelSubtitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 21)
-        label.textColor = .white
+        label.textColor = .colorLabelText
         return label
     }()
     
@@ -29,7 +29,7 @@ final class NoticeDetailViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         makeToolbar()
-        makeItems()
+        makeViews()
     }
     
     // MARK: - Make
@@ -38,10 +38,23 @@ final class NoticeDetailViewController: BaseViewController {
         setBarTitle("Notice")
     }
     
-    private func makeItems() {
+    private func makeViews() {
         labelTitle.layer.borderColor = UIColor.colorBrilliantAzure.cgColor
         labelTitle.layer.cornerRadius = 70
         labelTitle.layer.borderWidth = 5
+        
+        view.addSubview(labelTitle)
+        labelTitle.snp.makeConstraints({ maker in
+            maker.width.height.equalTo(140)
+            maker.center.equalToSuperview()
+        })
+        
+        view.addSubview(labelSubtitle)
+        labelSubtitle.snp.makeConstraints({ maker in
+            maker.top.equalTo(labelTitle.snp.bottom).offset(8)
+            maker.left.right.equalToSuperview().inset(16)
+            maker.height.equalTo(40)
+        })
     }
     
     // MARK: - Set
