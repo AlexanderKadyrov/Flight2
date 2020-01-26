@@ -9,13 +9,14 @@ public class BaseViewController: UIViewController {
     }
     
     public init() {
-        super.init(nibName: String(describing: type(of: self)), bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
     // MARK: - View
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .colorOnyx
     }
     
     // MARK: - Set
