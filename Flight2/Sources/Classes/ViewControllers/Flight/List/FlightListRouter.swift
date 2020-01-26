@@ -1,10 +1,10 @@
 import UIKit
 
-final class FlightRouter {
+final class FlightListRouter {
     
     // MARK: - Enums
     
-    public enum FlightSegue {
+    public enum FlightListSegue {
         case notice(FlightProtocol)
         case event(FlightProtocol)
         case move(FlightProtocol)
@@ -12,7 +12,7 @@ final class FlightRouter {
     
     // MARK: - Perform
     
-    public func perform(_ segue: FlightSegue, from source: UIViewController) {
+    public func perform(_ segue: FlightListSegue, from source: UIViewController) {
         switch segue {
         case .notice(value):
             break

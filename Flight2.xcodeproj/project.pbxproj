@@ -37,7 +37,7 @@
 		CE3E0EB123DDA95000239DAA /* FlightListTabloidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB023DDA95000239DAA /* FlightListTabloidCellViewModel.swift */; };
 		CE3E0EB723DDFC6E00239DAA /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB623DDFC6E00239DAA /* NoticeDetailViewController.swift */; };
 		CE3E0EBA23DE3ADF00239DAA /* NoticeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB923DE3ADF00239DAA /* NoticeDetailViewModel.swift */; };
-		CE3E0EBC23DE3DEC00239DAA /* FlightRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EBB23DE3DEC00239DAA /* FlightRouter.swift */; };
+		CE3E0EBC23DE3DEC00239DAA /* FlightListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EBB23DE3DEC00239DAA /* FlightListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +76,7 @@
 		CE3E0EB023DDA95000239DAA /* FlightListTabloidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListTabloidCellViewModel.swift; sourceTree = "<group>"; };
 		CE3E0EB623DDFC6E00239DAA /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		CE3E0EB923DE3ADF00239DAA /* NoticeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewModel.swift; sourceTree = "<group>"; };
-		CE3E0EBB23DE3DEC00239DAA /* FlightRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRouter.swift; sourceTree = "<group>"; };
+		CE3E0EBB23DE3DEC00239DAA /* FlightListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListRouter.swift; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +187,6 @@
 		CE1BE19D23DCE1F400E096EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E0EBD23DE3E7900239DAA /* Routers */,
 				CE3E0EB523DDFC5700239DAA /* Notice */,
 				CE1BE19E23DCE21100E096EF /* Flight */,
 				CE1BE1A023DCE2F100E096EF /* Base */,
@@ -209,6 +208,7 @@
 				CE3E0EAD23DDA86B00239DAA /* Cell */,
 				CE1BE18723DCDE7C00E096EF /* FlightListViewController.swift */,
 				CE1BE1A723DCE7A600E096EF /* FlightListViewModel.swift */,
+				CE3E0EBB23DE3DEC00239DAA /* FlightListRouter.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -445,14 +445,6 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		CE3E0EBD23DE3E7900239DAA /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-				CE3E0EBB23DE3DEC00239DAA /* FlightRouter.swift */,
-			);
-			path = Routers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,7 +583,7 @@
 				CE1BE1B923DCEB4000E096EF /* DateFormatter+Extension.swift in Sources */,
 				CE1BE1A223DCE30D00E096EF /* BaseViewController.swift in Sources */,
 				CE1BE1D723DD8C7800E096EF /* NavigationController.swift in Sources */,
-				CE3E0EBC23DE3DEC00239DAA /* FlightRouter.swift in Sources */,
+				CE3E0EBC23DE3DEC00239DAA /* FlightListRouter.swift in Sources */,
 				CE1BE1D123DCF6A100E096EF /* ConfigurationService.swift in Sources */,
 				CE1BE1C523DCF2C400E096EF /* TimeInterval+Extension.swift in Sources */,
 			);
