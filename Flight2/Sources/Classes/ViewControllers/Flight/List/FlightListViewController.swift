@@ -5,10 +5,19 @@ import SnapKit
 import UIKit
 
 fileprivate extension Reactive where Base: FlightListViewController {
+    
     var didSelectItem: BindingTarget<TabloidCellViewModel> {
         return makeBindingTarget { base, value in
             guard let value = value as? FlightListTabloidCellViewModel else { return }
             base.router.perform(value.model, from: base)
+        }
+    }
+    
+    var showError: BindingTarget<Error> {
+        return makeBindingTarget { base, value in
+            let alert = UIAlertController(title: "alert_error_title".localized(), message: value.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            base.present(alert, animated: true, completion: nil)
         }
     }
 }
@@ -39,6 +48,7 @@ final class FlightListViewController: BaseViewController {
         super.viewDidLoad()
         makeTableView()
         makeToolbar()
+        makeItems()
         loadData()
     }
     
@@ -64,6 +74,10 @@ final class FlightListViewController: BaseViewController {
     
     private func makeToolbar() {
         setBarTitle("flight_navigation_bar_title".localized() + " " + "App")
+    }
+    
+    private func makeItems() {
+        reactive.showError <~ viewModel.actionFetchFlightList.errors
     }
     
     // MARK: - Load

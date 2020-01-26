@@ -6,3 +6,7 @@
 
 "event_start_time_title" = "Departure";
 "event_end_time_title" = "Landing";
+
+//Alert
+
+"alert_error_title" = "Error";

@@ -6,3 +6,7 @@
 
 "event_start_time_title" = "Вылет";
 "event_end_time_title" = "Посадка";
+
+//Alert
+
+"alert_error_title" = "Ошибка";
