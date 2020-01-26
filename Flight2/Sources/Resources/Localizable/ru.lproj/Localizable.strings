@@ -1,0 +1,8 @@
+//Flight
+
+"flight_navigation_bar_title" = "Полёт";
+
+//Event
+
+"event_start_time_title" = "Вылет";
+"event_end_time_title" = "Посадка";
