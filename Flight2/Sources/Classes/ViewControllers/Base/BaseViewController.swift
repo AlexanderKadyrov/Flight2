@@ -16,7 +16,7 @@ public class BaseViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .colorOnyx
+        view.backgroundColor = .colorBackground
     }
     
     // MARK: - Set

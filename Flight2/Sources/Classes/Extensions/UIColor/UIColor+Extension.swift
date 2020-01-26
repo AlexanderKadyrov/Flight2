@@ -1,8 +1,16 @@
 import UIKit
 
 extension UIColor {
+    
     public static let colorBrilliantAzure = color(hex: "33A1FD")
-    public static let colorOnyx = color(hex: "31393C")
+    
+    public static let colorBackground: UIColor = {
+        if #available(iOS 13.0, *) {
+            guard let color = UIColor(named: "color_background") else { return .white }
+            return color
+        }
+        return .white
+    }()
 }
 
 fileprivate extension UIColor {
