@@ -1,3 +1,5 @@
+import ReactiveSwift
+import ReactiveCocoa
 import TabloidView
 import SnapKit
 import UIKit
@@ -5,6 +7,13 @@ import UIKit
 final class FlightListViewController: BaseViewController {
     
     // MARK: - Properties
+    
+    public lazy var refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        view.tintColor = .white
+        return view
+    }()
     
     public lazy var tabloidView: TabloidView = {
         let view = TabloidView(viewModel: viewModel.tabloidViewModel)
@@ -30,6 +39,16 @@ final class FlightListViewController: BaseViewController {
         tabloidView.snp.makeConstraints({ maker in
             maker.edges.equalToSuperview()
         })
+        makeRefreshControl()
+    }
+    
+    private func makeRefreshControl() {
+        refreshControl.reactive.isRefreshing <~ viewModel.actionFetchFlightList.isExecuting
+        if #available(iOS 10.0, *) {
+            tabloidView.refreshControl = refreshControl
+        } else {
+            tabloidView.addSubview(refreshControl)
+        }
     }
     
     private func makeToolbar() {
@@ -38,7 +57,7 @@ final class FlightListViewController: BaseViewController {
     
     // MARK: - Load
     
-    private func loadData() {
+    @objc private func loadData() {
         viewModel.actionFetchFlightList.apply().start()
     }
 }
