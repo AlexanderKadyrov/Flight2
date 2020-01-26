@@ -11,7 +11,7 @@ final class FlightListViewController: BaseViewController {
     public lazy var refreshControl: UIRefreshControl = {
         let view = UIRefreshControl()
         view.addTarget(self, action: #selector(loadData), for: .valueChanged)
-        view.tintColor = .white
+        view.tintColor = .colorRefreshControl
         return view
     }()
     
