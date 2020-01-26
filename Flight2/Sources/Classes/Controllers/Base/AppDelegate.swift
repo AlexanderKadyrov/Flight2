@@ -10,6 +10,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Application
     
     public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
         let vc = FlightListViewController()
         let nv = NavigationController(vc, color: .colorOnyx)
         window?.rootViewController = nv
