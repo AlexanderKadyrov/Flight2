@@ -4,6 +4,15 @@ import TabloidView
 import SnapKit
 import UIKit
 
+fileprivate extension Reactive where Base: FlightListViewController {
+    var select: BindingTarget<TabloidCellViewModel> {
+        return makeBindingTarget { base, value in
+            guard let value = value as? FlightListTabloidCellViewModel else { return }
+            base.router.perform(value.model, from: base)
+        }
+    }
+}
+
 final class FlightListViewController: BaseViewController {
     
     // MARK: - Properties
@@ -22,6 +31,7 @@ final class FlightListViewController: BaseViewController {
     }()
     
     public var viewModel: FlightListViewModel!
+    public var router: FlightListRouter!
     
     // MARK: - View
     
@@ -35,6 +45,7 @@ final class FlightListViewController: BaseViewController {
     // MARK: - Make
     
     private func makeTableView() {
+        reactive.select <~ viewModel.tabloidViewModel.pipeDidSelectItem.output
         view.addSubview(tabloidView)
         tabloidView.snp.makeConstraints({ maker in
             maker.edges.equalToSuperview()
