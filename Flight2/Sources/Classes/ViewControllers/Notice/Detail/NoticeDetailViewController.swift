@@ -45,8 +45,9 @@ final class NoticeDetailViewController: BaseViewController {
         
         view.addSubview(labelTitle)
         labelTitle.snp.makeConstraints({ maker in
+            maker.centerY.equalToSuperview().offset(-64)
             maker.width.height.equalTo(140)
-            maker.center.equalToSuperview()
+            maker.centerX.equalToSuperview()
         })
         
         view.addSubview(labelSubtitle)
