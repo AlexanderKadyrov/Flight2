@@ -15,9 +15,7 @@ fileprivate extension Reactive where Base: FlightListViewController {
     
     var showError: BindingTarget<Error> {
         return makeBindingTarget { base, value in
-            let alert = UIAlertController(title: "alert_error_title".localized(), message: value.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            base.present(alert, animated: true, completion: nil)
+            base.show(title: "alert_error_title".localized(), message: value.localizedDescription)
         }
     }
 }
