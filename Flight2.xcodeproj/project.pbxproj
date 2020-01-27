@@ -38,6 +38,7 @@
 		CE3E0EB723DDFC6E00239DAA /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB623DDFC6E00239DAA /* NoticeDetailViewController.swift */; };
 		CE3E0EBA23DE3ADF00239DAA /* NoticeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EB923DE3ADF00239DAA /* NoticeDetailViewModel.swift */; };
 		CE3E0EBC23DE3DEC00239DAA /* FlightListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E0EBB23DE3DEC00239DAA /* FlightListRouter.swift */; };
+		CE6E665A23DEC7FA003B7712 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E665923DEC7FA003B7712 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		CE3E0EB623DDFC6E00239DAA /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		CE3E0EB923DE3ADF00239DAA /* NoticeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewModel.swift; sourceTree = "<group>"; };
 		CE3E0EBB23DE3DEC00239DAA /* FlightListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListRouter.swift; sourceTree = "<group>"; };
+		CE6E665923DEC7FA003B7712 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DCB1278D976BBEB6AEDA4605 /* Pods-Flight2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight2.debug.xcconfig"; path = "Target Support Files/Pods-Flight2/Pods-Flight2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 		CE1BE1A323DCE43E00E096EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE6E665823DEC7E6003B7712 /* UIViewController */,
 				CE1BE1B723DCEB2900E096EF /* DateFormatter */,
 				CE1BE1C323DCF2A900E096EF /* TimeInterval */,
 				CE1BE1A423DCE46800E096EF /* Decoder */,
@@ -445,6 +448,14 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		CE6E665823DEC7E6003B7712 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE6E665923DEC7FA003B7712 /* UIViewController+Extension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +574,7 @@
 				CE3E0EAF23DDA8DE00239DAA /* FlightListTabloidCellView.swift in Sources */,
 				CE1BE18823DCDE7C00E096EF /* FlightListViewController.swift in Sources */,
 				CE1BE1AC23DCE90500E096EF /* NoticeService.swift in Sources */,
+				CE6E665A23DEC7FA003B7712 /* UIViewController+Extension.swift in Sources */,
 				CE1BE1BC23DCECD100E096EF /* Error+Extension.swift in Sources */,
 				CE1BE1C823DCF3D500E096EF /* EventService.swift in Sources */,
 				CE1BE1CB23DCF49500E096EF /* MoveService.swift in Sources */,
