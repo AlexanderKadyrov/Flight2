@@ -1,5 +1,8 @@
 import UIKit
 
+fileprivate let message = "Данный экран в процессе разработки. Пока можно глянуть структуру Notice, тапнув по ней:)"
+fileprivate let title = "Сообщение"
+
 final class FlightListRouter {
     
     // MARK: - Perform
@@ -11,10 +14,12 @@ final class FlightListRouter {
             let vc = NoticeDetailViewController()
             vc.viewModel = vm
             source.navigationController?.pushViewController(vc, animated: true)
-        } else if let value = value as? Event {
+        } else if let _ = value as? Event {
             //TODO: необходимо будет доделать по мере свободного времени:)
-        } else if let value = value as? Move {
+            source.show(title: title, message: message)
+        } else if let _ = value as? Move {
             //TODO: необходимо будет доделать по мере свободного времени:)
+            source.show(title: title, message: message)
         }
     }
 }
